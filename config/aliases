@@ -1,0 +1,9 @@
+e.=explorer .
+gl=git log --oneline --all --graph --decorate  $*
+ls=ls --color $*
+pwd=cd
+clear=cls
+l=ls --color $* -lah
+la=ls --color $* -lah
+..=cd ..
+cdh=cd %HOME%

@@ -1,0 +1,9 @@
+*.exe
+*.dll
+*.md
+*.xml
+*.lua
+Version*
+scripts
+vendor
+bin/alias.bat
