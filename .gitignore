@@ -1,9 +1,11 @@
 *.exe
 *.dll
-*.md
 *.xml
 *.lua
 Version*
 scripts
 vendor
+cmder/*.md
+cmder/bin/*.md
 cmder/bin/alias.bat
+cmder/config/*.md
