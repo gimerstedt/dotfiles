@@ -1,7 +1,6 @@
 *.exe
 *.dll
 *.xml
-*.lua
 Version*
 scripts
 vendor
