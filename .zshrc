@@ -78,3 +78,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sshhelena="ssh ake1@helena -p8080"
+alias sshzotac="ssh ake1@zotac -p20"
+alias sshdesktop="ssh ake1@desktop -p443"
+alias sshasdf="ssh ake1@asdf.gg -p20"
+alias C="clear"
