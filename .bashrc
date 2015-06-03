@@ -114,7 +114,7 @@ fi
 
 # custom shit
 alias l='ls -CF'
-alias la='ls -al --color'
+alias la='ls -ahl --color'
 alias lrt='ls -1Fcrt'
 alias ..='cd ..'
 alias ...='cd ../..'
