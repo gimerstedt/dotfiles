@@ -1,97 +1,135 @@
 !-----------------------------------------
-! TODO
-! clean up colors
-! sort out xft
-! some opacity setting
-!-----------------------------------------
-
-!-----------------------------------------
 ! XFT
 !-----------------------------------------
-Xft.dpi: 96
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.rgba: rgb
+!-Xft.dpi: 96
+!-Xft.antialias: 1
+!-Xft.hinting: 1
+!-Xft.hintstyle: hintfull
+!-Xft.rgba: rgb
 
 !-----------------------------------------
-URxvt*termName: rxvt-unicode-256color
-URxvt*loginShell: true
-URxvt*scrollBar: false
-URxvt*secondaryScroll: true
-URxvt*saveLines: 65535
-URxvt*cursorUnderline: false
-URxvt*urgentOnBell: true
-URxvt*cursorBlink: false
+urxvt*termName: rxvt-unicode-256color
+urxvt*loginShell: true
+urxvt*scrollBar: false
+urxvt*secondaryScroll: true
+urxvt*saveLines: 65535
+urxvt*cursorUnderline: false
+urxvt*urgentOnBell: true
+urxvt*cursorBlink: false
+
+! Transparency
+! urxvt*.transparent: true
+! urxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+urxvt*.shading: 30
 
 ! Extensions
-URxvt*perl-lib: /usr/lib/urxvt/perl/
-URxvt*perl-ext-common: default,matcher,searchable-scrollback
-URxvt*urlLauncher: google-chrome-stable
-URxvt*matcher.button: 1
+urxvt*perl-lib: /usr/lib/urxvt/perl/
+urxvt*perl-ext-common: default,matcher,searchable-scrollback
+urxvt*urlLauncher: google-chrome-stable
+urxvt*matcher.button: 1
 
 ! Catch ugly URLs
-URxvt*cutchars: '"'()*<>[]{|}
+urxvt*cutchars: '"'()*<>[]{|}
 
 ! Font Appearance
-! pacman -Ss terminus
-! when not usnig xft
-! URxvt*font: -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1
-URxvt*font: xft:terminus:pixelsize:12
-URxvt*boldFont: xft:terminus:bold:pixelsize:12
-URxvt*italicFont: xft:terminus:italic:pixelsize:12
-URxvt*boldItalicFont: xft:terminus:bold:italic:autohint=true:pixelsize:12
+urxvt*font: -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-1
+!urxvt*font: xft:terminus:pixelsize:24
+!urxvt*boldFont: xft:terminus:bold:pixelsize:16
+!urxvt*italicFont: xft:terminus:italic:pixelsize:16
+!urxvt*boldItalicFont: xft:terminus:bold:italic:autohint=true:pixelsize:16
 
-! Zenburn color-scheme
-!- URxvt*background: #3F3F3F
-URxvt*background: #222222
-URxvt*foreground: #DCDCCC
-URxvt*cursorColor: #DCDCCC
-URxvt*cursorColor2: #FFFFEF
-URxvt*colorUL: #8CD0D3
-URxvt*underlineColor: #F0DFAF
-URxvt*colorBD: #E0CF9F
-URxvt*colorIT: #656555
+!! Zenburn color-scheme
+!!- urxvt*background: #3F3F3F
+!!urxvt*background: #222222
+!urxvt*foreground: #DCDCCC
+!urxvt*cursorColor: #DCDCCC
+!urxvt*cursorColor2: #FFFFEF
+!urxvt*colorUL: #8CD0D3
+!urxvt*underlineColor: #F0DFAF
+!urxvt*colorBD: #E0CF9F
+!urxvt*colorIT: #656555
+!
+!!! black dark/light
+!urxvt*color0: #3F3F3F
+!urxvt*color8: #5F5F5F
+!!! red dark/light
+!urxvt*color1: #BC8383
+!urxvt*color9: #CC9393
+!!! green dark/light
+!urxvt*color2: #5F7F5F
+!urxvt*color10: #7F9F7F
+!!! yellow dark/light
+!urxvt*color3: #E0CF9F
+!urxvt*color11: #F0DFAF
+!!! blue dark/light
+!urxvt*color4: #7CB8BB
+!urxvt*color12: #8CD0D3
+!!! magenta dark/light
+!urxvt*color5: #DC8CC3
+!urxvt*color13: #DC8CC3
+!!! cyan dark/light
+!urxvt*color6: #93E0E3
+!urxvt*color14: #93E0E3
+!!! white dark/light
+!urxvt*color7: #DCDCCC
+!urxvt*color15: #FFFFFF
+!
+!! Tango Color Theme urxvt
+! urxvt*color0: rgba:1b1b/0808/0202/CCCC
+! urxvt*color1: rgb:cccc/0000/0000
+! urxvt*color2: rgb:4e4e/9a9a/0606
+! urxvt*color3: rgb:c4c4/a0a0/0000
+! urxvt*color4: rgb:3434/6565/a4a4
+! urxvt*color5: rgb:7575/5050/7b7b
+! urxvt*color6: rgb:0606/9820/9a9a
+! urxvt*color7: rgb:d3d3/d7d7/cfcf
+! urxvt*color8: rgb:5555/5757/5353
+! urxvt*color9: rgb:efef/2929/2929
+!urxvt*color10: rgb:8a8a/e2e2/3434
+!urxvt*color11: rgb:fcfc/e9e9/4f4f
+!urxvt*color12: rgb:7272/9f9f/cfcf
+!urxvt*color13: rgb:adad/7f7f/a8a8
+!urxvt*color14: rgb:3434/e2e2/e2e2
+!urxvt*color15: rgb:eeee/eeee/ecec
 
+!!Source http://github.com/altercation/solarized
+ 
+*background: #002b36
+*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+ 
 !! black dark/light
-URxvt*color0: #3F3F3F
-URxvt*color8: #5F5F5F
+*color0: #073642
+*color8: #002b36
+ 
 !! red dark/light
-URxvt*color1: #BC8383
-URxvt*color9: #CC9393
+*color1: #dc322f
+*color9: #cb4b16
+ 
 !! green dark/light
-URxvt*color2: #5F7F5F
-URxvt*color10: #7F9F7F
+*color2: #859900
+*color10: #586e75
+ 
 !! yellow dark/light
-URxvt*color3: #E0CF9F
-URxvt*color11: #F0DFAF
+*color3: #b58900
+*color11: #657b83
+ 
 !! blue dark/light
-URxvt*color4: #7CB8BB
-URxvt*color12: #8CD0D3
+*color4: #268bd2
+*color12: #839496
+ 
 !! magenta dark/light
-URxvt*color5: #DC8CC3
-URxvt*color13: #DC8CC3
+*color5: #d33682
+*color13: #6c71c4
+ 
 !! cyan dark/light
-URxvt*color6: #93E0E3
-URxvt*color14: #93E0E3
+*color6: #2aa198
+*color14: #93a1a1
+ 
 !! white dark/light
-URxvt*color7: #DCDCCC
-URxvt*color15: #FFFFFF
-
-! Tango Color Theme urxvt
- urxvt*color0: rgba:1b1b/0808/0202/CCCC
- urxvt*color1: rgb:cccc/0000/0000
- urxvt*color2: rgb:4e4e/9a9a/0606
- urxvt*color3: rgb:c4c4/a0a0/0000
- urxvt*color4: rgb:3434/6565/a4a4
- urxvt*color5: rgb:7575/5050/7b7b
- urxvt*color6: rgb:0606/9820/9a9a
- urxvt*color7: rgb:d3d3/d7d7/cfcf
- urxvt*color8: rgb:5555/5757/5353
- urxvt*color9: rgb:efef/2929/2929
-urxvt*color10: rgb:8a8a/e2e2/3434
-urxvt*color11: rgb:fcfc/e9e9/4f4f
-urxvt*color12: rgb:7272/9f9f/cfcf
-urxvt*color13: rgb:adad/7f7f/a8a8
-urxvt*color14: rgb:3434/e2e2/e2e2
-urxvt*color15: rgb:eeee/eeee/ecec
+*color7: #eee8d5
+*color15: #fdf6e3
