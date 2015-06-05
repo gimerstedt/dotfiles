@@ -1,11 +1,10 @@
 # download from
 # http://ohmyz.sh/
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ake1/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # theme
 ZSH_THEME="agnoster"
-#ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="false"
@@ -35,11 +34,12 @@ CASE_SENSITIVE="false"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git vi-mode vim-interaction archlinux common-aliases tmux)
+plugins=(git vi-mode vim-interaction common-aliases tmux)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
