@@ -1,6 +1,6 @@
 #!/bin/sh
 HERE=$(pwd)
-SCRIPTS=(bashrc config dircolors inputrc tmux.conf vimrc xinitrc Xresources zshrc)
+SCRIPTS=(bashrc dircolors inputrc tmux.conf vimrc xinitrc Xresources zshrc)
 mkdir -p backup
 
 for index in ${!SCRIPTS[*]}
@@ -11,6 +11,3 @@ do
 	printf "linking $S to $HOME/.$S\n"
 	ln -s $HERE/$S $HOME/.$S
 done
-
-#mkdir -p backup && mv ~/.bashrc backup
-#ln -s $HERE/.bashrc ~/.bashrc
