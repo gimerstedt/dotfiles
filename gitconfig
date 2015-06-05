@@ -1,4 +1,7 @@
 
+[push]
+	default = simple
+
 [alias]
 cp = cherry-pick
 st = status -bs
