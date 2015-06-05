@@ -1,0 +1,2 @@
+plugins=(git vi-mode vim-interaction common-aliases tmux archlinux)
+source ~/git/dotfiles/zshrc
