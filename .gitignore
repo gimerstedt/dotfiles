@@ -1,6 +1,7 @@
 *.exe
 *.dll
 *.xml
+backup
 Version*
 scripts
 vendor
