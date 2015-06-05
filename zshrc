@@ -63,5 +63,6 @@ alias rm="rm"
 alias cp="cp"
 alias mv="mv"
 alias rezshrc="source ~/.zshrc"
+alias lt="ls -lhrt"
 
 eval `dircolors ~/.dircolors`
