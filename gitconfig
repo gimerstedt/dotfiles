@@ -1,7 +1,7 @@
 
 [alias]
 cp = cherry-pick
-st = status -s
+st = status -bs
 cl = clone
 ci = commit
 co = checkout
