@@ -2,8 +2,7 @@
 
 ##bashrc
 source bashrc from ~/.bashrc
-
-	echo "source ~/git/dotfiles/bashrc" >> ~/.bashrc
+look at example bashrc.template
 
 ###inputrc
 case-insensitive auto-complete, link to ~/.inputrc
@@ -20,10 +19,7 @@ link to ~/.dircolors and eval in zshrc
 	ln -s ~/git/dotfiles/dircolors ~/.dircolors
 
 ##gitconfig
-some aliases, include in ~/.gitconfig
-
-	[include]
-		path = ~/git/dotfiles/gitconfig
+some aliases, include in your own gitconfig, see gitconfig.template
 
 ##tmux
 TBD
@@ -45,5 +41,5 @@ TODO: clean up
 source zshrc from ~/.zshrc
 assumes oh-my-zsh installed.
 theme uses powerline-patched font, need to install.
-
-	echo "source ~/git/dotfiles/zshrc" >> ~/.zshrc
+if you want to customize plugins, add it before the source line in your ~/.zshrc
+look at example zshrc.template

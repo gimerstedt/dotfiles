@@ -34,7 +34,10 @@ CASE_SENSITIVE="false"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git vi-mode vim-interaction common-aliases tmux)
+if [ -z "$plugins" ]
+then
+	plugins=(git vi-mode vim-interaction common-aliases tmux)
+fi
 
 # User configuration
 
