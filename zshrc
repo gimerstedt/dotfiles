@@ -4,7 +4,24 @@
 export ZSH=~/.oh-my-zsh
 
 # theme
-ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"		# powerline
+#ZSH_THEME="alanpeabody"
+#ZSH_THEME="bira"
+#ZSH_THEME="bureau"
+#ZSH_THEME="dstufft"
+#ZSH_THEME="fishy"
+#ZSH_THEME="fox"
+#ZSH_THEME="gnzh"		# 2 lines, fix colors
+#ZSH_THEME="kphoen"		# 2 lines, need to move dirty to left
+#ZSH_THEME="murilasso"		# 2 lines, few colors
+#ZSH_THEME="pygmalion"		# 1 line, colorful, all left
+#ZSH_THEME="risto"		# 1 line, some color, all left, truncated pwd
+#ZSH_THEME="rkj-repos"		# 2 line, some color, git hash, ugly ass clock
+#ZSH_THEME="simonoff"		# 2 line, red/white
+#ZSH_THEME="sporty_256"		# 2 line, whoami@hostname to the right, do like, needs work
+#ZSH_THEME="steeef"		# 2 line, like it, needs work
+#ZSH_THEME="takashiyoshida"	# 2 line, like it, needs better colors/full pwd
+#ZSH_THEME="wezm+"		# 1 line, pwd to the right
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="false"
