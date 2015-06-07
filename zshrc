@@ -2,6 +2,7 @@
 # http://ohmyz.sh/
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+export TERM='xterm-256color'
 
 # theme
 ZSH_THEME="agnoster"		# powerline
