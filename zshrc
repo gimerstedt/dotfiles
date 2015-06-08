@@ -82,5 +82,6 @@ alias cp="cp"
 alias mv="mv"
 alias rezshrc="source ~/.zshrc"
 alias lt="ls -lhrt"
+alias vl="cd /var/log"
 
 eval `dircolors ~/.dircolors`
