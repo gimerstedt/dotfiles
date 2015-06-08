@@ -3,6 +3,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export TERM='xterm-256color'
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin:$PATH
 
 # theme
 ZSH_THEME="agnoster"		# powerline
@@ -59,7 +60,6 @@ fi
 
 # User configuration
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
