@@ -5,5 +5,5 @@ set relativenumber
 set nobackup
 set noundofile
 
-highlight colorcolumn ctermbg=magenta
-set colorcolumn=81
+highlight colorcolumn ctermbg=red
+call matchadd('colorcolumn', '\%81v', 100)
