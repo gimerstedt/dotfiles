@@ -1,5 +1,5 @@
-require("eminent")
 local revelation=require("revelation")
+require("eminent")
 
 -- Standard awesome library
 local gears = require("gears")
@@ -10,7 +10,6 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
-revelation.init()
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -43,6 +42,9 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+
+-- Expose-like functionality, revelation!
+revelation.init()
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -168,7 +170,6 @@ mytasklist.buttons = awful.util.table.join(
 
 --myHotCorner = wibox.widget.textbox()
 --myHotCorner:set_text("boop")
---myHotCorner:connect_signal("mouse::enter", revelation)
 myHotCorner = wibox.widget.imagebox()
 myHotCorner:set_image(beautiful.awesome_icon)
 myHotCorner:connect_signal("mouse::enter", revelation)
