@@ -47,7 +47,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "termite"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
