@@ -1,0 +1,4 @@
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin:$PATH
+plugins=(git vi-mode vim-interaction common-aliases tmux archlinux)
+source ~/git/dotfiles/zshrc
+source ~/git/dotfiles/aliases.zsh
