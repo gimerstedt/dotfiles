@@ -21,6 +21,5 @@ antigen bundle vim-interaction
 
 antigen bundle robbyrussell/oh-my-zsh lib/completion.zsh
 antigen bundle djui/alias-tips
-antigen bundle unixorn/autoupdate-antigen.zshplugin
 
 antigen apply
