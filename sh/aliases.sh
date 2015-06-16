@@ -117,6 +117,14 @@ if [[ -x `which yaourt` ]]; then
 	alias yaorph='yaourt -Qtd'
 fi
 
+# apt-get
+if [[ -x `which apt-get` ]]; then
+	alias aptupg='sudo apt-get update && sudo apt-get upgrade'
+	alias aptin='sudo apt-get install'
+	alias aptrem='sudo apt-get remove'
+	alias aptreps='apt-cache search'
+fi
+
 # ssh
 alias sshhelena="ssh ake1@helena -p8080"
 alias sshzotac="ssh ake1@zotac -p20"
