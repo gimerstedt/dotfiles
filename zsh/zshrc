@@ -1,0 +1,26 @@
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/bin/site_perl
+export PATH=$PATH:/usr/bin/vendor_perl
+export PATH=$PATH:/usr/bin/core_perl
+
+source ~/git/dotfiles/sh/env.sh
+source ~/git/dotfiles/sh/aliases.sh
+source ~/git/dotfiles/zsh/antigen.zsh
+
+antigen use oh-my-zsh
+antigen theme agnoster
+
+antigen bundle git
+antigen bundle vi-mode
+antigen bundle vim-interaction
+
+antigen bundle robbyrussell/oh-my-zsh lib/completion.zsh
+antigen bundle djui/alias-tips
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+
+antigen apply
