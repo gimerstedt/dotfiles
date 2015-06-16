@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 if [ -z "$plugins" ]
 then
-	plugins=(git vi-mode vim-interaction tmux)
+	plugins=(git vi-mode vim-interaction)
 fi
 
 # User configuration
