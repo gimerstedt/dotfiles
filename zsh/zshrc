@@ -13,7 +13,7 @@ source ~/git/dotfiles/sh/aliases.sh
 source ~/git/dotfiles/zsh/antigen.zsh
 
 antigen use oh-my-zsh
-antigen theme agnoster
+antigen theme alanpeabody
 
 antigen bundle git
 antigen bundle vi-mode
@@ -23,3 +23,5 @@ antigen bundle robbyrussell/oh-my-zsh lib/completion.zsh
 antigen bundle djui/alias-tips
 
 antigen apply
+
+eval `dircolors ~/.dircolors`
