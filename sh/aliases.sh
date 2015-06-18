@@ -76,18 +76,20 @@ alias mv="mv"
 alias vl="cd /var/log"
 
 # suffixes
-alias -g H='| head'
-alias -g T='| tail'
-alias -g G='| grep'
-alias -g L="| less"
-alias -g M="| most"
-alias -g LL="2>&1 | less"
-alias -g CA="2>&1 | cat -A"
-alias -g NE="2> /dev/null"
-alias -g NUL="> /dev/null 2>&1"
+if [[ -x `echo $0 | grep zsh` ]]; then
+	alias -g H='| head'
+	alias -g T='| tail'
+	alias -g G='| grep'
+	alias -g L="| less"
+	alias -g M="| most"
+	alias -g LL="2>&1 | less"
+	alias -g CA="2>&1 | cat -A"
+	alias -g NE="2> /dev/null"
+	alias -g NUL="> /dev/null 2>&1"
+fi
 
 # pacman
-if [[ -x `which pacman` ]]; then
+if [[ -x `which pacman 2>/dev/null` ]]; then
 	alias paclsorphans='sudo pacman -Qdt'
 	alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 	alias pacupd='sudo pacman -Sy'
@@ -103,7 +105,7 @@ if [[ -x `which pacman` ]]; then
 fi
 
 # yaourt
-if [[ -x `which yaourt` ]]; then
+if [[ -x `which yaourt 2>/dev/null` ]]; then
 	alias yaupg='yaourt -Syua'
 	alias yain='yaourt -S'
 	alias yains='yaourt -U'
@@ -118,7 +120,7 @@ if [[ -x `which yaourt` ]]; then
 fi
 
 # apt-get
-if [[ -x `which apt-get` ]]; then
+if [[ -x `which apt-get 2>/dev/null` ]]; then
 	alias aptupg='sudo apt-get update && sudo apt-get upgrade'
 	alias aptin='sudo apt-get install'
 	alias aptrem='sudo apt-get remove'

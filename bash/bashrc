@@ -113,8 +113,5 @@ if ! shopt -oq posix; then
 fi
 
 # custom shit
-alias l='ls -CF'
-alias la='ls -ahl --color'
-alias lrt='ls -1Fcrt'
-alias ..='cd ..'
-alias ...='cd ../..'
+source ~/git/dotfiles/sh/env.sh
+source ~/git/dotfiles/sh/aliases.sh
