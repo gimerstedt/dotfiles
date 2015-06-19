@@ -12,4 +12,4 @@ ln -s $cwd/vim/vimrc ~/.vimrc
 ln -s $cwd/vim/vimrc ~/.nvimrc
 ln -s $cwd/zsh/zshrc ~/.zshrc
 ln -s $cwd/dircolors ~/.dircolors
-ln -s $cwd/bash ~/.inputrc
+ln -s $cwd/bash/inputrc ~/.inputrc

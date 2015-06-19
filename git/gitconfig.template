@@ -2,4 +2,4 @@
 	email = rickard@gimerstedt.se
 	name = Rickard Gimerstedt
 [include]
-	path = ~/git/dotfiles/gitconfig
+	path = ~/git/dotfiles/git/gitconfig
