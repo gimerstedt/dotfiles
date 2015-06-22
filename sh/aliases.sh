@@ -136,3 +136,6 @@ alias sshdebian="ssh ake1@localhost -p2222"
 
 # emacs as root
 alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudoedit"
+
+# root it up
+alias S="sudo -E -s $SHELL"

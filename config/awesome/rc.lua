@@ -47,7 +47,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "termite"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -233,6 +233,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
     awful.key({ modkey,		  }, "e",      revelation),
+    awful.key({ modkey,		  }, "b", function () awful.util.spawn("google-chrome-stable") end),
     awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/ 2>/dev/null'") end),
 
     awful.key({ modkey}, "r", function()
