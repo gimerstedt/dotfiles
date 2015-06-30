@@ -154,6 +154,8 @@ layefrs configuration."
   (linum-relative-toggle)
   (auto-complete)
   (indent-guide-global-mode)
+  (setq-default indent-tabs-mode t)
+  (setq-default tab-width 4)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
