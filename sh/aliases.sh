@@ -130,9 +130,8 @@ fi
 # ssh
 alias sshhelena="ssh ake1@helena -p8080"
 alias sshzotac="ssh ake1@zotac -p20"
-alias sshdesktop="ssh ake1@desktop -p443"
+alias sshdesktop="ssh ake1@desktop -p20"
 alias sshasdf="ssh ake1@asdf.gg -p20"
-alias sshdebian="ssh ake1@localhost -p2222"
 
 # emacs as root
 alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudoedit"
