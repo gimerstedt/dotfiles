@@ -10,6 +10,7 @@ export PATH=$PATH:/usr/bin/core_perl
 
 source ~/git/dotfiles/sh/env.sh
 source ~/git/dotfiles/sh/aliases.sh
+source ~/git/dotfiles/sh/functions.sh
 source ~/git/dotfiles/zsh/antigen.zsh
 
 antigen use oh-my-zsh

@@ -139,3 +139,6 @@ alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudoedit"
 
 # root it up
 alias S="sudo -E -s $SHELL"
+
+# docker
+alias dps="docker ps -a"
