@@ -116,3 +116,7 @@ fi
 source ~/git/dotfiles/sh/env.sh
 source ~/git/dotfiles/sh/aliases.sh
 source ~/git/dotfiles/sh/functions.sh
+
+set -o vi
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'

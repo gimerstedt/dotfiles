@@ -1,13 +1,45 @@
-syntax on
+colorscheme monokai	" https://github.com/sickill/vim-monokai
 
-set nu
-set relativenumber
-set nobackup
-set noundofile
-set tabstop=2
-set autoindent
+set tabstop=4							" who came up with 8?
+set shiftwidth=4						" i know right?
+set number								" show line numbers
+set relativenumber						" make line numbers relative
+set cursorline							" highlight current line
+set wildmenu							" visual autocomplete for cmd
+set lazyredraw							" speed up macros
+set showmatch							" highlight [{()}]
 
-highlight colorcolumn ctermbg=red
-call matchadd('colorcolumn', '\%81v', 100)
+set ignorecase							" search is case insensitive
+set smartcase							" only lower case searches are case insensitive
 
+set showcmd								" show cmd bottom right
+set nobackup							" yolo
+set noundofile							" yolo
+
+" plugins installed with vim-plug
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'rking/ag.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-sensible'
+Plug 'Valloric/YouCompleteMe'
+call plug#end()
+
+" remap leader to space
+let mapleader = ' '
+" nerdtree
+nnoremap <leader>t :NERDTreeToggle<CR>
+" the silver surfer
+nnoremap <leader>a :Ag 
+" jk works as esc
+inoremap jk <esc>
+" remap command key
 nnoremap ; :
+nnoremap : <nop>
+" move vertically in visual selections
+nnoremap j gj
+nnoremap k gk
+" more convenient EOL/BOL mappings
+nnoremap B ^
+nnoremap E $

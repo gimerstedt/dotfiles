@@ -128,7 +128,7 @@ if [[ -x `which apt-get 2>/dev/null` ]]; then
 fi
 
 # ssh
-alias sshhelena="ssh ake1@helena -p8080"
+alias sshhelena="ssh ake1@helena -p443"
 alias sshzotac="ssh ake1@zotac -p20"
 alias sshdesktop="ssh ake1@desktop -p20"
 alias sshasdf="ssh ake1@asdf.gg -p20"
