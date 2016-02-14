@@ -24,5 +24,3 @@ antigen bundle robbyrussell/oh-my-zsh lib/completion.zsh
 antigen bundle djui/alias-tips
 
 antigen apply
-
-eval `dircolors ~/.dircolors`

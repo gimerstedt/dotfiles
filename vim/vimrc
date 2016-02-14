@@ -36,7 +36,6 @@ nnoremap <leader>a :Ag
 inoremap jk <esc>
 " remap command key
 nnoremap ; :
-nnoremap : <nop>
 " move vertically in visual selections
 nnoremap j gj
 nnoremap k gk
