@@ -20,10 +20,8 @@ set noundofile							" yolo
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-sensible'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " remap leader to space
