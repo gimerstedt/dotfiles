@@ -49,3 +49,6 @@ nnoremap k gk
 " more convenient EOL/BOL mappings
 nnoremap B ^
 nnoremap E $
+
+" show hidden chars
+set list
