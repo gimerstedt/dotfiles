@@ -1,15 +1,14 @@
 # aliases in this file are trying to be bash and zsh compatible
 
 # ls
-alias l='ls -lFh'     #size,show type,human readable
-alias la='ls -lAFh'   #long list,show almost all,show type,human readable
-alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
-alias ll='ls -l'      #long list
-alias lt="ls -lhrt"
-alias ldot='ls -ld .*'
-alias lS='ls -1FSsh'
-alias lart='ls -1Fcart'
-alias lrt='ls -1Fcrt'
+alias l='ls -lFh --color'     #size,show type,human readable
+alias la='ls -lAFh --color'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh --color'   #sorted by date,recursive,show type,human readable
+alias ll='ls -l --color'      #long list
+alias lt='ls -lhrt --color'
+alias lS='ls -1FSsh --color'
+alias lart='ls -1Fcart --color'
+alias lrt='ls -1Fcrt --color'
 
 # movement
 alias .='pwd'
