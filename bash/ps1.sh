@@ -60,4 +60,4 @@ exitstatus()
 	fi
 }
 
-export PS1='$(exitstatus)\u@\h:\w $(parse_git_branch)\$ '
+export PS1='$(exitstatus)\u@\h:\w$(parse_git_branch)\$ '
