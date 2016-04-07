@@ -56,6 +56,7 @@ alias gcm='git commit -m'
 alias gco='git co'
 alias gm='git merge'
 alias gd='git diff'
+alias gpu='git push'
 
 # common shell functions
 alias less='less -r'
