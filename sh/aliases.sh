@@ -43,6 +43,7 @@ alias ff='find . -type f -name'
 
 # mimic vim functions
 alias :q='exit'
+alias vi='vim'
 
 # vimrc editing
 alias ve='vim ~/.vimrc'

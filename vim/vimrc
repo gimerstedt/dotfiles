@@ -1,12 +1,12 @@
 if empty(glob('~/.vim/colors/monokai.vim'))
-  silent !curl -fLo ~/.vim/colors/monokai.vim --create-dirs
-    \ https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim
+	silent !curl -fLo ~/.vim/colors/monokai.vim --create-dirs
+		\ https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim
 endif
 if empty(glob('~/.vim/colors/cake.vim'))
-  silent !curl -fLo ~/.vim/colors/cake.vim --create-dirs
-	\ https://raw.githubusercontent.com/GGalizzi/cake-vim/master/colors/cake.vim
+	silent !curl -fLo ~/.vim/colors/cake.vim --create-dirs
+		\ https://raw.githubusercontent.com/GGalizzi/cake-vim/master/colors/cake.vim
 endif
-colorscheme cake
+"colorscheme monokai
 
 set tabstop=4									" who came up with 8?
 set shiftwidth=4								" i know right?
@@ -26,9 +26,9 @@ set directory=~/.vim/backup//,.					" do not clutter working directory
 " plugins installed with vim-plug
 " https://github.com/junegunn/vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
