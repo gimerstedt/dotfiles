@@ -22,6 +22,7 @@ set showcmd										" show cmd bottom right
 set list										" show hidden chars
 set backupdir=~/.vim/backup//,.					" do not clutter working directory
 set directory=~/.vim/backup//,.					" do not clutter working directory
+set paste										" do not indent my shit
 
 " plugins installed with vim-plug
 " https://github.com/junegunn/vim-plug
