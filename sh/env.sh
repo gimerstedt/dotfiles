@@ -2,4 +2,4 @@
 export BROWSER=google-chrome-stable
 export EDITOR=vim
 export LANG=en_US.UTF-8
-export PATH=/sbin:$PATH
+export PATH=~/bin:/sbin:$PATH
