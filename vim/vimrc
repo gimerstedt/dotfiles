@@ -6,7 +6,7 @@ if empty(glob('~/.vim/colors/cake.vim'))
 	silent !curl -fLo ~/.vim/colors/cake.vim --create-dirs
 		\ https://raw.githubusercontent.com/GGalizzi/cake-vim/master/colors/cake.vim
 endif
-"colorscheme monokai
+colorscheme cake
 
 set tabstop=4									" who came up with 8?
 set shiftwidth=4								" i know right?
