@@ -143,6 +143,8 @@ alias S="sudo -E -s $SHELL"
 
 # docker
 alias dps="docker ps -a"
+alias dlog="docker logs -f --tail=500"
+alias dlogs="dlog"
 
 # ip addresses
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
