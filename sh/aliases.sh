@@ -31,7 +31,6 @@ alias hgrep="fc -El 0 | grep"
 
 # show human friendly numbers and colors
 alias df='df -h'
-alias du='du -h -d 2'
 alias dud='du -h -d 1'
 alias duf='du -sh *'
 
