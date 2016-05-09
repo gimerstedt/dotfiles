@@ -6,7 +6,7 @@ if empty(glob('~/.vim/colors/cake.vim'))
 	silent !curl -fLo ~/.vim/colors/cake.vim --create-dirs
 		\ https://raw.githubusercontent.com/GGalizzi/cake-vim/master/colors/cake.vim
 endif
-colorscheme cake
+colorscheme monokai
 
 set tabstop=4									" who came up with 8?
 set shiftwidth=4								" i know right?
@@ -22,7 +22,8 @@ set showcmd										" show cmd bottom right
 set list										" show hidden chars
 set backupdir=~/.vim/backup//,.					" do not clutter working directory
 set directory=~/.vim/backup//,.					" do not clutter working directory
-set paste										" do not indent my shit
+" apparently a bad idea, do not do this
+" set paste										" do not indent my shit
 
 " plugins installed with vim-plug
 " https://github.com/junegunn/vim-plug
@@ -35,15 +36,23 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-sensible'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 " remap leader to space
 let mapleader = ' '
 " nerdtree
 nnoremap <leader>t :NERDTreeToggle<CR>
-" the silver surfer
-nnoremap <leader>a :Ag 
-" jk works as esc
-inoremap jk <esc>
 " remap command key
 nnoremap ; :
+
+inoremap jk <esc>
+cnoremap jk <esc>
+" lets test if this breaks anything
+inoremap <esc> <nop>
+
+nnoremap <leader>f :FZF<CR>
+
+" spacemacs...
+nnoremap <leader>fs :w<cr>
+nnoremap <leader>qq :q<cr>
