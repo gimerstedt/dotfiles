@@ -12,3 +12,5 @@ ln -s $cwd/vim/vimrc ~/.vimrc
 
 mkdir -p ~/.ssh
 ln -s $cwd/ssh/config ~/.ssh/config
+
+ln -s $cwd/sh/profile ~/.profile
