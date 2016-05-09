@@ -26,7 +26,6 @@ alias tkss='tmux kill-session -t'
 # ps
 alias psa="ps aux"
 alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
 alias hgrep="fc -El 0 | grep"
 
 # show human friendly numbers and colors
@@ -129,12 +128,6 @@ if [[ -x `which apt-get 2>/dev/null` ]]; then
 	alias aptreps='apt-cache search'
 fi
 
-# ssh
-alias sshhelena="ssh ake1@helena -p443"
-alias sshzotac="ssh ake1@zotac -p20"
-alias sshdesktop="ssh ake1@desktop -p20"
-alias sshasdf="ssh ake1@asdf.gg -p20"
-
 # emacs as root
 alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudoedit"
 
@@ -150,4 +143,3 @@ alias dlogs="dlog"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
