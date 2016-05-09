@@ -32,7 +32,9 @@ urxvt*matcher.button: 1
 urxvt*cutchars: '"'()*<>[]{|}
 
 ! Font Appearance
-urxvt*font: -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-1
+!urxvt.font: xft:Inconsolata:size=11
+urxvt.font: xft:UbuntuMono:size=18
+!urxvt*font: -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-1
 !urxvt*font: xft:terminus:pixelsize:24
 !urxvt*boldFont: xft:terminus:bold:pixelsize:16
 !urxvt*italicFont: xft:terminus:italic:pixelsize:16
@@ -88,3 +90,7 @@ urxvt*font: -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-1
 *.color19:      base02
 *.color20:      base04
 *.color21:      base06
+
+! rofi
+rofi.opacity: 85
+rofi.lines: 7
