@@ -1,7 +1,4 @@
-if [ -f ~/.bashrc ]; then
-	source ~/.bashrc
-fi
-export GOPATH=/home/ake1/dev/go
-export PATH=$PATH:/sbin/:$HOME/bin:$HOME/dev/go/bin:$HOME/.cargo/bin
-export RUST_SRC_PATH=/home/ake1/dev/rust-src/src
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
+export GOPATH=$HOME/dev/go
+export PATH="$PATH:/sbin/:$HOME/bin:$HOME/dev/go/bin:$HOME/.cargo/bin:$HOME/.local/share/umake/bin"
+export RUST_SRC_PATH=$HOME/dev/rust-src/src

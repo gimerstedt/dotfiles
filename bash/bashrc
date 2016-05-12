@@ -3,7 +3,6 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 source ~/git/dotfiles/bash/ps1.sh
-source ~/git/dotfiles/sh/env.sh
 source ~/git/dotfiles/sh/aliases.sh
 source ~/git/dotfiles/sh/functions.sh
 
