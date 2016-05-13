@@ -81,7 +81,7 @@ nnoremap <s-tab> <c-w>W
 
 " spacemacs...
 nnoremap <leader>fs :update<cr>
-nnoremap <leader>qq :q<cr>
+nnoremap <leader>qq :q!<cr>
 nnoremap <leader>wq :update<cr>:q<cr>
 nnoremap <leader>ww <c-w><c-w>
 nnoremap <leader>vsp :vsp .<cr>
