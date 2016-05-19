@@ -1,4 +1,5 @@
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 export GOPATH=$HOME/dev/go
+export GOROOT="/usr/lib/go-1.6"
 export PATH="$PATH:/sbin/:$HOME/bin:$HOME/dev/go/bin:$HOME/.cargo/bin:$HOME/.local/share/umake/bin"
 export RUST_SRC_PATH=$HOME/dev/rust-src/src

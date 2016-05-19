@@ -25,6 +25,7 @@ set hlsearch
 set incsearch
 set scrolloff=5									" leave 5 rows when scrolling
 set encoding=utf-8
+set nobackup
 
 " plugins installed with vim-plug
 " https://github.com/junegunn/vim-plug
@@ -34,10 +35,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'jlanzarotta/bufexplorer'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'fatih/vim-go'
+Plug 'Shougo/neocomplete.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'scrooloose/syntastic'
 call plug#end()
 
 " remap leader to space
@@ -80,6 +86,8 @@ nnoremap <tab> <c-w>w
 nnoremap <s-tab> <c-w>W
 
 " spacemacs...
+nnoremap <leader>fed :e ~/.vimrc<cr>
+nnoremap <leader>feR :so $MYVIMRC<cr>
 nnoremap <leader>fs :update<cr>
 nnoremap <leader>qq :q!<cr>
 nnoremap <leader>wq :update<cr>:q<cr>
@@ -87,4 +95,26 @@ nnoremap <leader>ww <c-w><c-w>
 nnoremap <leader>vsp :vsp .<cr>
 nnoremap <leader>fj :e .<cr>
 nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bb :ls<cr>
+nnoremap <leader>bb :BufExplorer<cr>
+
+"  Use neocomplete.
+"let g:neocomplete#enable_at_startup = 1
+"" Use smartcase.
+"let g:neocomplete#enable_smart_case = 1
+"
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_structs = 1
+"let g:go_highlight_interfaces = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+"let g:go_fmt_command = "goimports"
+"
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
