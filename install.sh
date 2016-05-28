@@ -14,3 +14,4 @@ mkdir -p ~/.ssh
 ln -sf $cwd/ssh/config ~/.ssh/config
 
 ln -sf $cwd/sh/profile ~/.profile
+ln -sf $cwd/ideavimrc ~/.ideavimrc

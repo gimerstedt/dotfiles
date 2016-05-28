@@ -8,26 +8,6 @@ if empty(glob('~/.vim/colors/cake.vim'))
 endif
 colorscheme monokai
 
-set tabstop=4									" who came up with 8?
-set shiftwidth=4								" i know right?
-set number										" show line numbers
-set relativenumber								" make line numbers relative
-set cursorline									" highlight current line
-set wildmenu									" visual autocomplete for cmd
-set lazyredraw									" speed up macros
-set showmatch									" highlight [{()}]
-set ignorecase									" search is case insensitive
-set smartcase									" only lower case searches are case insensitive
-set showcmd										" show cmd bottom right
-set list										" show hidden chars
-set visualbell
-set hlsearch
-set incsearch
-set scrolloff=5									" leave 5 rows when scrolling
-set encoding=utf-8
-set nobackup
-
-" plugins installed with vim-plug
 " https://github.com/junegunn/vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -35,7 +15,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jlanzarotta/bufexplorer'
@@ -46,61 +25,61 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'scrooloose/syntastic'
 call plug#end()
 
-" remap leader to space
+set tabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set scrolloff=5
+set number
+set relativenumber
+set cursorline
+set wildmenu
+set lazyredraw
+set showmatch
+set ignorecase
+set smartcase
+set showcmd
+set list
+set visualbell
+set hlsearch
+set incsearch
+set nobackup
+
 let mapleader = ' '
-" nerdtree
-nnoremap <leader>t :NERDTreeToggle<cr>
-" remap command key
-nnoremap ; :
-nnoremap Q @q
-nnoremap <leader>ff :FZF<cr>
-
-inoremap jk <esc>
-cnoremap jk <esc>
-xnoremap jk <esc>
-
-inoremap <c-h> <c-o>h
-inoremap <c-j> <c-o>j
-inoremap <c-k> <c-o>k
-inoremap <c-l> <c-o>l
-
-" center search
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
-nnoremap g# g#zz
-
-" nav buffers
-nnoremap b] :bnext<cr>
-nnoremap b[ :bprev<cr>
-
-" nav tabs
-nnoremap <c-t> :tabe<cr>
-nnoremap <c-l> :tabn<cr>
-nnoremap <c-h> :tabp<cr>
-
-" nav windows
-nnoremap <tab> <c-w>w
-nnoremap <s-tab> <c-w>W
-
-" spacemacs...
-nnoremap <leader>fed :e ~/.vimrc<cr>
-nnoremap <leader>feR :so $MYVIMRC<cr>
-nnoremap <leader>fs :update<cr>
-nnoremap <leader>qq :q!<cr>
-nnoremap <leader>wq :update<cr>:q<cr>
-nnoremap <leader>ww <c-w><c-w>
-nnoremap <leader>vsp :vsp .<cr>
-nnoremap <leader>fj :e .<cr>
-nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bb :BufExplorer<cr>
+nmap <esc> :noh<cr><esc>
+nmap ; :
+nmap Q @q
+nmap <leader>ff :FZF<cr>
+imap jk <esc>
+imap <c-h> <c-o>h
+imap <c-j> <c-o>j
+imap <c-k> <c-o>k
+imap <c-l> <c-o>l
+nmap <c-n> *zz
+nmap <c-p> #zz
+nmap b] :bnext<cr>
+nmap b[ :bprev<cr>
+nmap <c-t> :tabe<cr>
+nmap <c-l> :tabn<cr>
+nmap <c-h> :tabp<cr>
+nmap <c-w> :tabclose<cr>
+nmap <tab> <c-w>w
+nmap <s-tab> <c-w>W
+nmap <leader>t :NERDTreeToggle<cr>
+nmap <leader>fed :e ~/.vimrc<cr>
+nmap <leader>feR :so $MYVIMRC<cr>
+nmap <leader>fs :update<cr>
+nmap <leader>qq :call Bye()<cr>
+nmap <leader>wq :update<cr>:q<cr>
+nmap <leader>ww <c-w><c-w>
+nmap <leader>vsp :vsp .<cr>
+nmap <leader>fj :e .<cr>
+nmap <leader>bn :bn<cr>
+nmap <leader>bb :BufExplorer<cr>
 
 "  Use neocomplete.
-"let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 "" Use smartcase.
-"let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_smart_case = 1
 "
 "let g:go_highlight_functions = 1
 "let g:go_highlight_methods = 1
@@ -118,3 +97,12 @@ nnoremap <leader>bb :BufExplorer<cr>
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+
+" quit if useless, otherwise close buffer
+function! Bye()
+	if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+		:q
+	else
+		:bdelete
+	endif
+endfunction
