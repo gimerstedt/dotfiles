@@ -10,7 +10,7 @@ call DownloadTheme("monokai", "https://raw.githubusercontent.com/sickill/vim-mon
 call DownloadTheme("tender-contrast", "https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender-contrast.vim")
 call DownloadTheme("wellsokai", "https://raw.githubusercontent.com/wellsjo/wellsokai.vim/master/colors/wellsokai.vim")
 call DownloadTheme("luna-term", "https://raw.githubusercontent.com/notpratheek/vim-luna/master/colors/luna-term.vim")
-colorscheme tender-contrast
+colorscheme luna-term
 
 " https://github.com/junegunn/vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -24,6 +24,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/neocomplete.vim'
+Plug 'ternjs/tern_for_vim', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install' }
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'fatih/vim-go'
 " Plug 'scrooloose/syntastic'
@@ -65,6 +66,8 @@ nmap <c-p> #zz
 nmap <c-t> :tabe<cr>
 nmap <c-l> :tabn<cr>
 nmap <c-h> :tabp<cr>
+nmap H <c-o>
+nmap L <c-i>
 " nmap <c-w> :tabclose<cr> " can't have it all
 nmap <tab> <c-w>w
 nmap <s-tab> <c-w>W
@@ -84,6 +87,10 @@ nmap <leader>bn :bn<cr>
 nmap <leader>bb :BufExplorer<cr>
 nmap <leader>] :bnext<cr>
 nmap <leader>[ :bprev<cr>
+nmap <leader>gd :TernDef<cr>
+nmap <leader>ty :TernType<cr>
+nmap <leader>tr :TernRefs<cr>
+nmap <leader>re :TernRename<cr>
 
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
