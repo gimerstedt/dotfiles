@@ -25,7 +25,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ternjs/tern_for_vim', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install' }
-Plug 'sheerun/vim-polygot'
+Plug 'sheerun/vim-polyglot'
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'fatih/vim-go'
 " Plug 'scrooloose/syntastic'
