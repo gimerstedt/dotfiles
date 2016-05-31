@@ -7,3 +7,4 @@ source ~/git/dotfiles/sh/aliases.sh
 source ~/git/dotfiles/sh/functions.sh
 
 set -o vi
+set TERM=xterm-256color

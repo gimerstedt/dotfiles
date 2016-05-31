@@ -1,12 +1,16 @@
-if empty(glob('~/.vim/colors/monokai.vim'))
-	silent !curl -fLo ~/.vim/colors/monokai.vim --create-dirs
-		\ https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim
-endif
-if empty(glob('~/.vim/colors/cake.vim'))
-	silent !curl -fLo ~/.vim/colors/cake.vim --create-dirs
-		\ https://raw.githubusercontent.com/GGalizzi/cake-vim/master/colors/cake.vim
-endif
-colorscheme monokai
+function! DownloadTheme(name, url)
+	let l:filename = "~/.vim/colors/" . a:name . ".vim"
+	let l:curlcmd = "!curl -fLo " . l:filename . " --create-dirs " . a:url
+	if empty(glob(l:filename))
+		silent exec l:curlcmd
+	endif
+endfunction
+
+call DownloadTheme("monokai", "https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim")
+call DownloadTheme("tender-contrast", "https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender-contrast.vim")
+call DownloadTheme("wellsokai", "https://raw.githubusercontent.com/wellsjo/wellsokai.vim/master/colors/wellsokai.vim")
+call DownloadTheme("luna-term", "https://raw.githubusercontent.com/notpratheek/vim-luna/master/colors/luna-term.vim")
+colorscheme tender-contrast
 
 " https://github.com/junegunn/vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -19,12 +23,13 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'fatih/vim-go'
 Plug 'Shougo/neocomplete.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'fatih/vim-go'
+" Plug 'scrooloose/syntastic'
 call plug#end()
 
+set nocompatible
 set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
@@ -32,7 +37,6 @@ set scrolloff=5
 set number
 set relativenumber
 set cursorline
-set wildmenu
 set lazyredraw
 set showmatch
 set ignorecase
@@ -41,30 +45,33 @@ set showcmd
 set list
 set visualbell
 set hlsearch
-set incsearch
 set nobackup
+" set incsearch " in vim-sensible
+" set wildmenu " in vim-sensible
 
 let mapleader = ' '
-nmap <esc> :noh<cr><esc>
+nmap <esc> :nohlsearch<cr>^[
 nmap ; :
 nmap Q @q
-nmap <leader>ff :FZF<cr>
+
 imap jk <esc>
 imap <c-h> <c-o>h
 imap <c-j> <c-o>j
 imap <c-k> <c-o>k
 imap <c-l> <c-o>l
+
 nmap <c-n> *zz
 nmap <c-p> #zz
-nmap b] :bnext<cr>
-nmap b[ :bprev<cr>
 nmap <c-t> :tabe<cr>
 nmap <c-l> :tabn<cr>
 nmap <c-h> :tabp<cr>
-nmap <c-w> :tabclose<cr>
+" nmap <c-w> :tabclose<cr> " can't have it all
 nmap <tab> <c-w>w
 nmap <s-tab> <c-w>W
-nmap <leader>t :NERDTreeToggle<cr>
+
+nmap <leader>ff :FZF<cr>
+nmap <leader>tt :NERDTreeToggle<cr>
+nmap <leader>tn :colorscheme 
 nmap <leader>fed :e ~/.vimrc<cr>
 nmap <leader>feR :so $MYVIMRC<cr>
 nmap <leader>fs :update<cr>
@@ -75,28 +82,30 @@ nmap <leader>vsp :vsp .<cr>
 nmap <leader>fj :e .<cr>
 nmap <leader>bn :bn<cr>
 nmap <leader>bb :BufExplorer<cr>
+nmap <leader>] :bnext<cr>
+nmap <leader>[ :bprev<cr>
 
-"  Use neocomplete.
+" Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
-"" Use smartcase.
+" Use smartcase.
 let g:neocomplete#enable_smart_case = 1
-"
-"let g:go_highlight_functions = 1
-"let g:go_highlight_methods = 1
-"let g:go_highlight_structs = 1
-"let g:go_highlight_interfaces = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_build_constraints = 1
-"let g:go_fmt_command = "goimports"
-"
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_interfaces = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_fmt_command = "goimports"
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " quit if useless, otherwise close buffer
 function! Bye()
