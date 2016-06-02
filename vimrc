@@ -62,13 +62,13 @@ imap <c-j> <c-o>j
 imap <c-k> <c-o>k
 imap <c-l> <c-o>l
 
+nmap H 0
+nmap L $
 nmap <c-n> *zz
 nmap <c-p> #zz
 nmap <c-t> :tabe<cr>
 nmap <c-l> :tabn<cr>
 nmap <c-h> :tabp<cr>
-nmap H <c-o>
-nmap L <c-i>
 " nmap <c-w> :tabclose<cr> " can't have it all
 nmap <tab> <c-w>w
 nmap <s-tab> <c-w>W
