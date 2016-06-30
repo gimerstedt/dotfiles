@@ -80,6 +80,7 @@ nmap <leader>fed :e ~/.vimrc<cr>
 nmap <leader>feR :so $MYVIMRC<cr>
 nmap <leader>fs :update<cr>
 nmap <leader>qq :call Bye()<cr>
+nmap <leader>st :call ToggleShowInvisibleCharacters()<cr>
 nmap <leader>wq :update<cr>:q<cr>
 nmap <leader>ww <c-w><c-w>
 nmap <leader>vsp :vsp .<cr>
@@ -121,5 +122,13 @@ function! Bye()
 		:q
 	else
 		:bdelete
+	endif
+endfunction
+
+function! ToggleShowInvisibleCharacters()
+	if &list
+		:set nolist
+	else
+		:set list
 	endif
 endfunction
