@@ -93,6 +93,7 @@ nmap <leader>gd :TernDef<cr>
 nmap <leader>ty :TernType<cr>
 nmap <leader>tr :TernRefs<cr>
 nmap <leader>re :TernRename<cr>
+nmap <leader>l G=gg<c-o><c-o>
 
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
