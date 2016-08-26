@@ -1,3 +1,4 @@
+let os = substitute(system('uname'), "\n", "", "")
 function! DownloadTheme(name, url)
 	let l:filename = "~/.vim/colors/" . a:name . ".vim"
 	let l:curlcmd = "!curl -fLo " . l:filename . " --create-dirs " . a:url
@@ -15,18 +16,22 @@ colorscheme luna-term
 " https://github.com/junegunn/vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ternjs/tern_for_vim', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install' }
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
+if os != "Linux"
+	Plug 'ctrlpvim/ctrlp.vim'
+else
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'fatih/vim-go'
 " Plug 'scrooloose/syntastic'
@@ -74,7 +79,12 @@ nmap <c-h> :tabp<cr>
 nmap <tab> <c-w>w
 nmap <s-tab> <c-w>W
 
-nmap <leader>ff :FZF<cr>
+if os != "Linux"
+	nmap <leader>ff :CtrlP<cr>
+else
+	nmap <leader>ff :FZF<cr>
+endif
+
 nmap <leader>tt :NERDTreeToggle<cr>
 nmap <leader>tn :colorscheme 
 nmap <leader>fed :e ~/.vimrc<cr>
@@ -100,6 +110,8 @@ nmap <leader>l mfG=gg`f
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
+
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " let g:go_highlight_functions = 1
 " let g:go_highlight_methods = 1
