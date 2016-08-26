@@ -26,6 +26,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ternjs/tern_for_vim', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install' }
 Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'fatih/vim-go'
 " Plug 'scrooloose/syntastic'
@@ -93,7 +94,7 @@ nmap <leader>gd :TernDef<cr>
 nmap <leader>ty :TernType<cr>
 nmap <leader>tr :TernRefs<cr>
 nmap <leader>re :TernRename<cr>
-nmap <leader>l G=gg<c-o><c-o>
+nmap <leader>l mfG=gg`f
 
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
