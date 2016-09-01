@@ -27,6 +27,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'ternjs/tern_for_vim', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install' }
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 if os != "Linux"
 	Plug 'ctrlpvim/ctrlp.vim'
 else
