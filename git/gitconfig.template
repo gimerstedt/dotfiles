@@ -1,5 +1,0 @@
-[user]
-	email = rickard@gimerstedt.se
-	name = Rickard Gimerstedt
-[include]
-	path = ~/git/dotfiles/git/gitconfig
